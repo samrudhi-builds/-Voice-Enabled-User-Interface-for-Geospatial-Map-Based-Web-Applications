@@ -1,0 +1,11 @@
+export type Coordinates = { lat: number; lng: number };
+export type Place = Coordinates & { id: string; name: string; label: string; source: 'Nominatim' | 'Coordinates' };
+export const categories = ['cafe', 'restaurant', 'hospital', 'park', 'hotel', 'attraction'] as const;
+export type Category = (typeof categories)[number];
+export type Basemap = 'street' | 'topographic';
+export type Poi = Coordinates & { id: string; name: string; category: Category; distanceM: number; address?: string };
+export type UserMarker = Coordinates & { id: string; name: string; source: 'command' | 'click' };
+export type Route = { origin: Place; destination: Place; distanceM: number; durationS: number; geometry: [number, number][]; mode: 'driving' };
+export type PoiLookup = { results: Poi[]; provider: 'Overpass' | 'Photon'; note?: string };
+export type PoiSearch = { center: Place; category: Category; radiusM: number; results: Poi[]; provider?: PoiLookup['provider']; note?: string };
+export type HistoryEntry = { id: string; input: string; intent: string; status: 'processing' | 'success' | 'error' | 'cancelled'; message: string; time: string };
