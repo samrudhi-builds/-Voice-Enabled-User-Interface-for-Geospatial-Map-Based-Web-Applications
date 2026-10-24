@@ -7,5 +7,5 @@
     "noEmit": true, "types": ["vite/client", "node"],
     "noUnusedLocals": true, "noUnusedParameters": true
   },
-  "include": ["src", "server", "tests", "vite.config.ts"]
+  "include": ["src", "server", "api", "tests", "vite.config.ts"]
 }
