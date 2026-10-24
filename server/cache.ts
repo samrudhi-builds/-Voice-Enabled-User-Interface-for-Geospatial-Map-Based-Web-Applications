@@ -1,7 +1,7 @@
 import { readFile, writeFile, rename, mkdir } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
-import { ServiceError } from './data';
+import { ServiceError } from './data.js';
 export type Cached<T> = { data: T; cached: boolean; fetchedAt: string };
 type Entry = { data: unknown; expiresAt: number; fetchedAt: string };
 export class RequestCache {
