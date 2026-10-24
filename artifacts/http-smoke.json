@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-10-21T17:00:53.480Z",
+  "server": "production",
+  "checks": [
+    {
+      "path": "/api/health",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/assets/missing.js",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/geocode?q=",
+      "method": "GET",
+      "status": 400
+    },
+    {
+      "path": "/api/geocode?q=91%2C72",
+      "method": "GET",
+      "status": 400
+    },
+    {
+      "path": "/api/poi?lat=19&lng=72&category=cafe&radius=99999",
+      "method": "GET",
+      "status": 400
+    },
+    {
+      "path": "/api/route?from_lat=19&from_lng=72",
+      "method": "GET",
+      "status": 400
+    },
+    {
+      "path": "/api/missing",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/health",
+      "method": "POST",
+      "status": 405
+    }
+  ],
+  "coordinateParsing": "passed",
+  "geocoding": {
+    "first": {
+      "id": "node/245711197",
+      "lat": 23.0215374,
+      "lng": 72.5800568,
+      "name": "Ahmedabad",
+      "label": "Ahmedabad, Gujarat, 380001, India",
+      "source": "Nominatim"
+    },
+    "cacheVerified": true
+  },
+  "poi": {
+    "provider": "Photon",
+    "count": 40,
+    "note": "Overpass is unavailable. Showing Photon fallback results; coverage may differ.",
+    "examples": [
+      {
+        "id": "N/7944300038",
+        "lat": 18.9401785,
+        "lng": 72.8283196,
+        "category": "cafe",
+        "distanceM": 443.28680739539374,
+        "name": "Cafe Coffee Day",
+        "address": "Vithaldas Thackersey Marg, Narayanpada"
+      },
+      {
+        "id": "N/11250525037",
+        "lat": 18.9439688,
+        "lng": 72.8284833,
+        "category": "cafe",
+        "distanceM": 633.0941550137809,
+        "name": "U. K. Juice center",
+        "address": "1st Dhobitalao Lane, Navjeevan Wadi"
+      },
+      {
+        "id": "N/9574663630",
+        "lat": 18.9441069,
+        "lng": 72.8287886,
+        "category": "cafe",
+        "distanceM": 667.0714043800481,
+        "name": "Kyani & Co.",
+        "address": "657, Jagannath Shankarsheth Marg, Navjeevan Wadi"
+      }
+    ]
+  },
+  "finalCheckAt": "2026-10-21T17:12:07.678Z",
+  "route": {
+    "mode": "driving",
+    "distanceM": 3699.1,
+    "durationS": 303.2,
+    "geometryPoints": 93,
+    "origin": "Gateway of India",
+    "destination": "Marine Drive"
+  },
+  "finalHealth": "passed"
+}

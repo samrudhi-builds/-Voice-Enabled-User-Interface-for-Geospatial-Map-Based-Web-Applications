@@ -1,0 +1,53 @@
+{
+  "approvedDestination": "/home/thewitch/geovoice-mvp-samrudhi",
+  "symlink": false,
+  "gitRepository": false,
+  "ancestorGitRepository": false,
+  "previewPid": 3053294,
+  "files": {
+    "README.md": {
+      "bytes": 13199,
+      "sha256": "b330895225b3b8e0657facbecdf39e3fb066c653019c1609f3a7c3c479d7d954"
+    },
+    "docs/implementation.md": {
+      "bytes": 5512,
+      "sha256": "ae9473c4433fdf5f2ce67aa4513ba28f73cf0c5a651afc5bd58ff20e1be7af38"
+    },
+    "docs/verification.md": {
+      "bytes": 8043,
+      "sha256": "fb88604d1fbfadb2099c2ea6d3308b6fce4c470b0a976415f9a48ca2cf86faf4"
+    },
+    "package-lock.json": {
+      "bytes": 90251,
+      "sha256": "0ec653d0534f7b0253d8401b0faa0fbaa6306ae78cdecdc14d558ccc66ea248b"
+    },
+    "dist/index.html": {
+      "bytes": 698,
+      "sha256": "ad4fd635ecce220dfe452304764bcd99fa0b5247daa031986eb59c7bc1b96c74"
+    },
+    "artifacts/desktop-route.png": {
+      "bytes": 169431,
+      "sha256": "a85a4c50682c0a9ac5eb499ddac26f96f31bf2a93937631b19ad78a74d53f98f"
+    },
+    "artifacts/desktop-poi.png": {
+      "bytes": 141243,
+      "sha256": "e60b9e2a842d7ff6ae8fdc89dc76547d202a1e64cff0f0df3439d4fbc7ad196d"
+    },
+    "artifacts/mobile-route.png": {
+      "bytes": 45642,
+      "sha256": "5d119e34ad6c01a12dbea59de553012daeb5298f6eaad33e1dfdc111bf13d724"
+    },
+    "artifacts/test-results.txt": {
+      "bytes": 491,
+      "sha256": "6a478da9f7958af6b8533616f4dafafdbade2cd7130c8081c4773424ddc49909"
+    },
+    "artifacts/build.txt": {
+      "bytes": 492,
+      "sha256": "21b2e002ce8bd478c2e1e96e8dad437be5a15e2702828a904296adef18f2eac8"
+    },
+    "artifacts/typecheck.txt": {
+      "bytes": 129,
+      "sha256": "14067b736b5b850aa5031016e38cdd24cadd8a90f2369e575bdceb1bba525702"
+    }
+  }
+}
