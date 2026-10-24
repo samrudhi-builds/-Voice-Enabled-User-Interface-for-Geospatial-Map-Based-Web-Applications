@@ -1,12 +1,13 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { resolve } from 'node:path';
-import { categories } from '../src/types';
-import type { Category, Place, PoiLookup } from '../src/types';
-import { RequestCache, SerialGate } from './cache';
-import { normalizePhotonPois, normalizePlaces, normalizePois, normalizeRoute, parseCoordinates, ServiceError, validCoordinates } from './data';
+import { categories } from '../src/types.js';
+import type { Category, Place, PoiLookup } from '../src/types.js';
+import { RequestCache, SerialGate } from './cache.js';
+import { normalizePhotonPois, normalizePlaces, normalizePois, normalizeRoute, parseCoordinates, ServiceError, validCoordinates } from './data.js';
 
 const root = resolve(import.meta.dirname, '..');
-const cache = new RequestCache(resolve(root, '.cache/service-cache.json'));
+// Vercel deployments are read-only; only the local server persists its cache.
+const cache = new RequestCache(process.env.VERCEL === '1' ? undefined : resolve(root, '.cache/service-cache.json'));
 const geocodingGate = new SerialGate(1100), poiGate = new SerialGate(1500);
 const endpoints = {
   geocode: process.env.GEOCODING_URL || 'https://nominatim.openstreetmap.org/search',
@@ -17,7 +18,7 @@ const endpoints = {
 let retryOverpassAfter = 0;
 async function upstream(url: string, provider: string, options: RequestInit = {}, timeout = 18000): Promise<unknown> {
   try {
-    const response = await fetch(url, { ...options, headers: { 'User-Agent': 'GeoVoiceMVP/1.0 (local personal GIS prototype)', Accept: 'application/json', ...options.headers }, signal: AbortSignal.timeout(timeout) });
+    const response = await fetch(url, { ...options, headers: { 'User-Agent': 'GeoVoiceMVP/1.0 (personal GIS prototype)', Accept: 'application/json', ...options.headers }, signal: AbortSignal.timeout(timeout) });
     if (response.status === 429) throw new ServiceError(`${provider} is rate limiting requests. Wait a minute before retrying.`, 429);
     if (!response.ok) throw new ServiceError(`${provider} is unavailable right now. Please retry later.`);
     return await response.json();
@@ -94,3 +95,4 @@ export async function handleApi(req: IncomingMessage, res: ServerResponse): Prom
   }
   return true;
 }
+
