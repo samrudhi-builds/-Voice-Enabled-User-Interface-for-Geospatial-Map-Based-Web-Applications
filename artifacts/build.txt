@@ -1,0 +1,14 @@
+
+> geovoice-mvp@1.0.0 build
+> TMPDIR=./tmp XDG_CACHE_HOME=./.cache NODE_COMPILE_CACHE=./tmp/node-compile-cache tsc --noEmit && vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 1984 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.69 kB │ gzip:   0.42 kB
+dist/assets/index-CunHC0MN.css   49.38 kB │ gzip:  14.98 kB
+dist/assets/index-Bs_216WD.js   423.25 kB │ gzip: 129.52 kB
+
+✓ built in 1.02s

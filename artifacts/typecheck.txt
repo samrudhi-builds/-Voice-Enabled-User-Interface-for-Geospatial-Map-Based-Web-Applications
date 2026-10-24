@@ -1,0 +1,4 @@
+
+> geovoice-mvp@1.0.0 typecheck
+> TMPDIR=./tmp XDG_CACHE_HOME=./.cache NODE_COMPILE_CACHE=./tmp/node-compile-cache tsc --noEmit
+
