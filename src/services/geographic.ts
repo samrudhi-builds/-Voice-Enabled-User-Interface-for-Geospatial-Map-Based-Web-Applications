@@ -10,7 +10,7 @@ async function request<T>(path: string, params: Record<string, string | number>,
     return payload.data as T;
   } catch (error) {
     if (signal.aborted) throw error;
-    if (error instanceof TypeError) throw new Error('Could not connect to GeoVoice. Check your connection and the local server.');
+    if (error instanceof TypeError) throw new Error('Could not connect to GeoVoice. Check your connection and try again.');
     if (error instanceof Error && error.name === 'TimeoutError') throw new Error('The search took too long. Please retry.');
     throw error;
   }
