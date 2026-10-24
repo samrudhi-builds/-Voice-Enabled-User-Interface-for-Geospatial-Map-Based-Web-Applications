@@ -1,4 +1,4 @@
-import type { Category, Coordinates, Place, Poi, Route } from '../src/types';
+import type { Category, Coordinates, Place, Poi, Route } from '../src/types.js';
 
 export class ServiceError extends Error {
   constructor(message: string, public status = 502) { super(message); }
