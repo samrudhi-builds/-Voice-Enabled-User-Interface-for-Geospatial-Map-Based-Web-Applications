@@ -7,7 +7,7 @@ A voice-enabled geospatial web application featuring interactive maps, natural-l
 
 ### [🌐 Try GeoVoice — Live Demo](https://geovoice-explore.vercel.app/)
 
-**[GitHub Repository](https://github.com/samrudhi-builds/-Voice-Enabled-User-Interface-for-Geospatial-Map-Based-Web-Applications)** · **[Production Verification Report](docs/GeoVoice-Live-Smoke-Test-2026-10-24.pdf)**
+**[GitHub Repository](https://github.com/samrudhi-builds/-Voice-Enabled-User-Interface-for-Geospatial-Map-Based-Web-Applications)** · **[Production Verification Report](docs/GeoVoice-Project-Showcase.pdf)**
 
 GeoVoice is a deployed, map-first GIS MVP built with React, TypeScript, Vite, and Leaflet. Users can explore locations through typed commands or supported browser speech recognition.
 
