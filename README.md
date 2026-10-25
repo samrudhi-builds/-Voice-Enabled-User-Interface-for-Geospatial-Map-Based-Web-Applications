@@ -258,7 +258,7 @@ Speech recognition remains browser-dependent. A desktop browser on an Omarchy Li
 
 ### Verification evidence
 
-**[View the Production Smoke-Test Report (PDF)](docs/GeoVoice-Live-Smoke-Test-2026-10-24.pdf)**
+**[View the Production Showcase Report (PDF)](docs/GeoVoice-Project-Showcase.pdf)** 
 
 The PDF preserves the original October 24 observations. Its voice test was unverified at the time of capture; the successful physical-phone test described above occurred afterward.
 
